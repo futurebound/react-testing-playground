@@ -8,12 +8,19 @@ function App() {
     setHeading('Radical Rhinos');
   };
 
+  const doNotClickHandler = () => {
+    setHeading('serious why i said do not');
+  };
+
   return (
     <>
       <button type='button' onClick={clickHandler}>
         Click Me
       </button>
       <h1>{heading}</h1>
+      <button type='button' onClick={doNotClickHandler}>
+        Do NOT Click Me
+      </button>
     </>
   );
 }

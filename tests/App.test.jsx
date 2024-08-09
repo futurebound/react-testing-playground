@@ -20,4 +20,17 @@ describe('App', () => {
 
     expect(screen.getByRole('heading').textContent).toMatch(/radical rhinos/i);
   });
+
+  it('renders radical rhinos after button click', async () => {
+    const user = userEvent.setup();
+
+    render(<App />);
+    const button = screen.getByRole('button', { name: 'Do NOT Click Me' });
+
+    await user.click(button);
+
+    expect(screen.getByRole('heading').textContent).toMatch(
+      /serious why i said do not/i
+    );
+  });
 });

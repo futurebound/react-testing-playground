@@ -23,6 +23,9 @@ function App() {
       <button type='button' onClick={doNotClickHandler}>
         Do NOT Click Me
       </button>
+      <button type='button' onClick={doNotClickHandler}>
+        Definitely Click Me
+      </button>
       <p>{text}</p>
     </>
   );
